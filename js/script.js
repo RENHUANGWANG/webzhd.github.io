@@ -49,26 +49,32 @@ $(function (e) {//导航栏
 });
 
 $(function(){//fullPage回调函数
-    var rankArr = ['了解','熟悉','熟练','精通','大神'];
-    var rankScore = ['75%','65%','75%','60%','60%','60%'];
+    var rankScore = ['25%','65%','75%','50%','60%','60%'];
     var width = $('.skill-v').width();
     function rank(ele){
-            var i=0;
+            var rankText;
             var nWidth = $(ele).width();
             var n = nWidth/width;
-            //console.log(n);
-            if(0<n<=0.2){
-                i = 0;
-            }else if(0.2<n<=0.4){
-                i = 1;
-            }else if(0.4<n<=0.6){
-                i = 2;
-            }else if(0.6<n<=0.8){
-                i = 3;
-            }else if(0.8<n){
-                i = 4;
+            if(0<n && n<=0.2){
+                rankText="了解";
+            }else if(0.2<n && n<=0.3){
+                rankText="在学";
+            }else if(0.3<n && n<=0.4){
+                rankText="会用";
+            }else if(0.4<n && n<=0.5){
+                rankText="熟悉";
+            }else if(0.5<n && n<=0.6){
+                rankText="掌握";
+            }else if(0.6<n && n<=0.7){
+                rankText="熟练";
+            }else if(0.7<n && n<=0.8){
+                rankText="精通";
+            }else if(0.9<n){
+                rankText="大成";
             }
-            $('.skill-des').html(rankArr[i]);
+            console.log(n);
+            console.log(rankText);
+            $(ele).next().html(rankText);
     }
     $('main').fullpage({
         sectionsColor: ['#eee', '#eee', '#eee', '#eee'],
