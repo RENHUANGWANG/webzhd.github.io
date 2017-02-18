@@ -49,7 +49,7 @@ $(function (e) {//导航栏
 });
 
 $(function(){//fullPage回调函数
-    var rankScore = ['25%','65%','75%','50%','60%','60%'];
+    var rankScore = ['75%','65%','75%','50%','30%','60%','80'];
     var width = $('.skill-v').width();
     function rank(ele){
             var rankText;
