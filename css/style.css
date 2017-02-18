@@ -210,5 +210,14 @@ nav div.v i {
 @media screen and (max-width: 768px) {
   .skill-v {
     width: 100%;
+    height: 30px;
+  }
+  .skill-v .skill {
+    height: 30px;
+    line-height: 30px;
+  }
+  .skill-v .skill-des {
+    height: 30px;
+    line-height: 30px;
   }
 }
