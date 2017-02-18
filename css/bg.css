@@ -1,0 +1,79 @@
+body {
+  background-color: #000;
+  overflow: hidden;
+}
+nav {
+  width: 100%;
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  transform: translateY(-50%);
+}
+nav ul {
+  text-align: center;
+}
+nav ul li {
+  display: inline-block;
+  width: 150px;
+}
+nav ul li a {
+  display: block;
+  height: 40px;
+  line-height: 40px;
+  border: 1px solid #333;
+  text-align: center;
+  color: #fff;
+  position: relative;
+}
+nav ul li a:hover {
+  border-color: #367dff;
+  color: #367dff;
+}
+nav ul li a::after,
+nav ul li a::before {
+  content: '';
+  display: block;
+  position: absolute;
+  box-sizing: border-box;
+  border: 2px solid transparent;
+  width: 0;
+  height: 0;
+}
+nav ul li a::after {
+  top: 0;
+  left: 0;
+  -webkit-transition: border-color 0s ease-in 0.8s, width 0.2s ease-in 0.6s, height 0.2s ease-in 0.4s;
+  transition: border-color 0s ease-in 0.8s, width 0.2s ease-in 0.6s, height 0.2s ease-in 0.4s;
+}
+nav ul li a::before {
+  bottom: 0;
+  right: 0;
+  -webkit-transition: border-color 0s ease-in 0.4s, width 0.2s ease-in 0.2s, height 0.2s ease-in;
+  transition: border-color 0s ease-in 0.4s, width 0.2s ease-in 0.2s, height 0.2s ease-in;
+}
+nav ul li a:hover::after {
+  width: 100%;
+  height: 100%;
+  border-right-color: #367dff;
+  border-top-color: #367dff;
+  transition: width 0.2s ease-out 0s, height 0.2s ease-out 0.2s;
+}
+nav ul li a:hover::before {
+  width: 100%;
+  height: 100%;
+  border-bottom-color: #367dff;
+  border-left-color: #367dff;
+  transition: border-color 0s ease-out 0.4s, width 0.2s ease-out 0.4s, height 0.2s ease-out 0.6s;
+}
+@media screen and (max-width: 767px) {
+  nav ul li {
+    width: 40%;
+    margin: 10px;
+  }
+}
+@media screen and (max-width: 480px) {
+  nav ul li {
+    width: 60%;
+    margin: 10px 5%;
+  }
+}
