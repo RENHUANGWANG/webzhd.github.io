@@ -49,31 +49,38 @@ $(function (e) {//导航栏
 });
 
 $(function(){//fullPage回调函数
-    var rankScore = ['75%','65%','75%','50%','30%','60%','80'];
+    var rankScore = ['75%','65%','75%','50%','30%','60%','80%'];
     var width = $('.skill-v').width();
+    var m = 0;
     function rank(ele){
             var rankText;
             var nWidth = $(ele).width();
             var n = nWidth/width;
-            if(0<n && n<=0.2){
+            if(0<n && n<=0.2 && m!=1){
                 rankText="了解";
-            }else if(0.2<n && n<=0.3){
+                m=1;
+            }else if(0.2<n && n<=0.3 && m!=2){
                 rankText="在学";
-            }else if(0.3<n && n<=0.4){
+                m=2;
+            }else if(0.3<n && n<=0.4 && m!=3){
                 rankText="会用";
-            }else if(0.4<n && n<=0.5){
+                m=3;
+            }else if(0.4<n && n<=0.5 && m!=4){
                 rankText="熟悉";
-            }else if(0.5<n && n<=0.6){
+                m=4;
+            }else if(0.5<n && n<=0.6 && m!=5){
                 rankText="掌握";
-            }else if(0.6<n && n<=0.7){
+                m=5;
+            }else if(0.6<n && n<=0.7 && m!=6){
                 rankText="熟练";
-            }else if(0.7<n && n<=0.8){
+                m=6;
+            }else if(0.7<n && n<=0.8 && m!=7){
                 rankText="精通";
-            }else if(0.9<n){
-                rankText="大成";
+                m=7;
+            }else if(0.8<n && m!=8) {
+                rankText = "大成";
+                m = 8;
             }
-            console.log(n);
-            console.log(rankText);
             $(ele).next().html(rankText);
     }
     $('main').fullpage({
@@ -86,7 +93,7 @@ $(function(){//fullPage回调函数
                     },100);
                     $(ele).stop().animate({
                         width: rankScore[index]
-                    }, 1500, 'easeOutExpo',function(){
+                    }, 1500,function(){
                         clearInterval(timer);
                         timer=null;
                     });
