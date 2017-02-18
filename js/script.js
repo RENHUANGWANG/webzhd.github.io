@@ -75,12 +75,14 @@ $(function(){//fullPage回调函数
         afterLoad: function(anchorLink, index){
             if(index == 2){
                 $('.vessel .skill-v .skill').each(function(index,ele){
-                    //var timer = setInterval("rank(ele)",100);
+                    var timer = setInterval(function(){
+                        rank(ele);
+                    },100);
                     $(ele).stop().animate({
                         width: rankScore[index]
                     }, 1500, 'easeOutExpo',function(){
-                        // clearInterval(timer);
-                        // timer=null;
+                        clearInterval(timer);
+                        timer=null;
                     });
                 });
             }
