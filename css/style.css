@@ -1,0 +1,214 @@
+nav {
+  height: 60px;
+  line-height: 60px;
+  border-bottom: 1px solid #ddd;
+}
+nav div.v {
+  height: 60px;
+  width: 80%;
+  margin: 0 auto;
+}
+nav div.v .n-logo {
+  font-size: 25px;
+  color: #4041F8;
+  margin-left: 5%;
+}
+nav div.v i {
+  height: 40px;
+  border-right: 1px solid #fff;
+  margin: 10px 80px 0 20px;
+}
+.nav-bar-v {
+  width: 505px;
+  position: relative;
+}
+.top-line {
+  display: block;
+  width: 100px;
+  height: 60px;
+  background: #FBB92E;
+  position: absolute;
+  top: 0;
+  left: 1px;
+}
+.nav-bar {
+  position: relative;
+  height: 60px;
+}
+.nav-bar li {
+  float: left;
+  width: 100px;
+  margin-left: 1px;
+}
+.nav-bar li a {
+  display: block;
+  text-align: center;
+  color: #fff;
+}
+.nav-bar li.on:nth-child(1) {
+  border-bottom: 4px solid #FBB92E;
+}
+.nav-bar li.on:nth-child(2) {
+  border-bottom: 4px solid #B4F62F;
+}
+.nav-bar li.on:nth-child(3) {
+  border-bottom: 4px solid #3FF7F3;
+}
+.nav-bar li.on:nth-child(4) {
+  border-bottom: 4px solid #3A97FA;
+}
+.nav-bar li.on:nth-child(5) {
+  border-bottom: 4px solid #D544F6;
+}
+.menu {
+  display: none;
+}
+.shade {
+  display: none;
+}
+@media screen and (max-width: 992px) {
+  nav {
+    height: 50px;
+    line-height: 50px;
+  }
+  nav div.v {
+    height: 50px;
+    width: 100%;
+  }
+  nav div.v .n-logo {
+    font-size: 25px;
+  }
+  nav div.v i {
+    height: 40px;
+    margin: 5px 80px 0 20px;
+  }
+  .top-line {
+    display: none;
+  }
+  .nav-bar {
+    display: none;
+  }
+  .menu {
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    right: 30px;
+    top: 12px;
+    z-index: 3;
+  }
+  .menu p {
+    background: #4041F8;
+    display: block;
+    width: 30px;
+    height: 3px;
+    border-radius: 3px;
+    margin-bottom: 9px;
+    opacity: 1;
+    -webkit-transition: all .4s ease;
+    -moz-transition: all .4s ease;
+    -ms-transition: all .4s ease;
+    -o-transition: all .4s ease;
+    transition: all 0.4s ease;
+  }
+  .menu.active p:nth-child(1) {
+    background-color: #fff;
+    -webkit-transform: rotate3d(0, 0, 1, -45deg) translate3d(-10.6px, 6.6px, 0);
+    -moz-transform: rotate3d(0, 0, 1, -45deg) translate3d(-10.6px, 6.6px, 0);
+    -ms-transform: rotate3d(0, 0, 1, -45deg) translate3d(-10.6px, 6.6px, 0);
+    -o-transform: rotate3d(0, 0, 1, -45deg) translate3d(-10.6px, 6.6px, 0);
+    transform: rotate3d(0, 0, 1, -45deg) translate3d(-10.6px, 6.6px, 0);
+  }
+  .menu.active p:nth-child(2) {
+    opacity: 0;
+    background-color: #fff;
+    -webkit-transform: translateX(20px);
+    -moz-transform: translateX(20px);
+    -ms-transform: translateX(20px);
+    -o-transform: translateX(20px);
+    transform: translateX(20px);
+  }
+  .menu.active p:nth-child(3) {
+    background-color: #fff;
+    -webkit-transform: rotate3d(0, 0, 1, 45deg) translate3d(-9.6px, -6.6px, 0);
+    -moz-transform: rotate3d(0, 0, 1, 45deg) translate3d(-9.6px, -6.6px, 0);
+    -ms-transform: rotate3d(0, 0, 1, 45deg) translate3d(-9.6px, -6.6px, 0);
+    -o-transform: rotate3d(0, 0, 1, 45deg) translate3d(-9.6px, -6.6px, 0);
+    transform: rotate3d(0, 0, 1, 45deg) translate3d(-9.6px, -6.6px, 0);
+  }
+  .shade {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 2;
+  }
+  .shade a {
+    display: block;
+    color: #4041F8;
+    font-size: 2em;
+    text-align: center;
+    margin-top: 10%;
+  }
+  .shade a:first-child {
+    margin-top: 20%;
+  }
+  .shade .active {
+    color: #ffffff;
+  }
+}
+@media screen and (max-width: 768px) {
+  nav {
+    height: 50px;
+    line-height: 50px;
+  }
+  nav div.v {
+    height: 50px;
+    width: 100%;
+  }
+  nav div.v .n-logo {
+    font-size: 25px;
+  }
+  nav div.v i {
+    height: 40px;
+    margin: 5px 80px 0 20px;
+  }
+  .menu {
+    top: 10px;
+  }
+}
+.section1 {
+  background: url("../img/01.jpg") no-repeat center center;
+  background-size: 100% 100%;
+}
+.skill-v {
+  width: 500px;
+  height: 60px;
+  border: 1px solid #eee;
+  background: #ccc;
+  margin-bottom: 20px;
+  position: relative;
+}
+.skill-v .skill {
+  height: 60px;
+  line-height: 60px;
+  width: 15%;
+  text-align: left;
+  background: #ddd;
+  overflow: hidden;
+}
+.skill-v .skill-des {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 60px;
+  line-height: 60px;
+  padding-right: 10px;
+}
+@media screen and (max-width: 768px) {
+  .skill-v {
+    width: 100%;
+  }
+}
